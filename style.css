@@ -1,0 +1,123 @@
+:root {
+    --clr-accent-1: hsl(31, 77%, 52%);
+    --clr-accent-2: hsl(184, 100%, 22%);
+    --clr-accent-3: hsl(179, 100%, 13%);
+
+    --clr-neutral-100: hsla(0, 0%, 100%, 0.75);
+    --clr-neutral-200: hsl(0, 0%, 95%);
+
+    --ff-paragraph: "Lexend Deca", sans-serif;
+    --ff-headings: "Big Shoulders Display", sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font: inherit;
+}
+
+img,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* general styling */
+
+body {
+    font-family: var(--ff-paragraph);
+    font-size: 0.9375rem;
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-neutral-200);
+
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+/* links */
+
+.links {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--clr-neutral-200);
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 100vmax;
+}
+
+@media (min-width: 700px) {
+    .links {
+        margin-top: 5rem;
+    }
+}
+
+.links:hover,
+.links:focus-visible {
+    color: var(--clr-neutral-200);
+    background-color: transparent;
+    outline: 2px solid var(--clr-neutral-200);
+}
+
+/* car-brand */
+
+.car-brand-name {
+    color: var(--clr-neutral-200);
+    font-weight: var(--fw-bold);
+    font-size: 2.25rem;
+    font-family: var(--ff-headings);
+    text-transform: uppercase;
+    margin-block: 1.75rem;
+}
+
+/* utility classes */
+
+.card {
+    width: 90%;
+    max-width: 1000px;
+    margin-inline: auto;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.container {
+    padding: 2.5rem;
+}
+
+.grid-flow {
+    display: grid;
+}
+
+@media (min-width: 700px) {
+    .grid-flow {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.bg-accent-1 {
+    background-color: var(--clr-accent-1);
+}
+.bg-accent-2 {
+    background-color: var(--clr-accent-2);
+}
+.bg-accent-3 {
+    background-color: var(--clr-accent-3);
+}
+
+.text-accent-1 {
+    color: var(--clr-accent-1);
+}
+.text-accent-2 {
+    color: var(--clr-accent-2);
+}
+.text-accent-3 {
+    color: var(--clr-accent-3);
+}
